@@ -1,0 +1,37 @@
+/* navbar.module.css */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #002349;
+    color: #957C3D;
+}
+
+.title {
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: inherit;
+}
+
+.navLinks {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: inherit;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 100px;
+    gap: 50px;
+}
+
+.navCart {
+    width: 40px;
+    height: 40px;
+}
