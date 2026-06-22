@@ -23,7 +23,7 @@
     align-items: center;
     justify-content: center;
     padding: 30px;
-    background-color: #957C3D;
+    background-image: url("./../../assets/slide-bg.png");
     width: 50%;
     min-height: 100%;
 }
