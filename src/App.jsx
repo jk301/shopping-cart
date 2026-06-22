@@ -1,12 +1,13 @@
 // App.jsx
 import './App.css'
 import { RouterProvider } from 'react-router'
+import { ProductList } from './components/product-list'
 
 import { router } from './routes'
 
 function App() {
   return (
-      <RouterProvider router={router} />
+    <ProductList> <RouterProvider router={router} /> </ProductList>
   )
 }
 

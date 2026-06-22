@@ -7,7 +7,7 @@ import cartIconGold from "./../../assets/shopping_cart_gold.svg"
 export function NavBar () {
     return (
         <div className={styles.navbar}>
-            <h1 className={styles.title}>The Shop</h1>
+            <h1 className={styles.title}>Mid-mall</h1>
             <nav>
                 <NavLink 
                     to="/" 
