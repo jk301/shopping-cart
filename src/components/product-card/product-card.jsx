@@ -81,11 +81,47 @@ export function ProductCard ({item, isCheckout = false, cart = false, index}) {
                       </button> 
                 }
             </div>
-
+        // vertical!!
         :   <div className={styles.productCardVer} key={item.id}>
                 <img src={item.image} className={styles.productImgVer}  alt={item.title} />
-                <h3 className={styles.titleVer}>{item.title}</h3>
-                <p className={styles.priceVer}>${item.price}</p>
+                <div className={styles.text}>
+                    <h3 className={styles.titleVer}>{item.title}</h3>
+                    <p className={styles.priceVer}>${item.price}</p>
+                </div>
+                <div className={styles.updater}>
+                    <div className={styles.cartDiv}>
+                        <img 
+                            src={remove} 
+                            onClick={() => cartF.decItem(item, index)} 
+                            className={styles.cartDivBut}
+                        />
+
+                        <input 
+                            type="number" 
+                            value={cartQuant} 
+                            onChange={(e) => setCartQuant(e.target.value)}
+                            onKeyDown={(e) => handleInputEnter(e)}
+                            onBlur={handleBlur}
+                            // onChange={(e) => cartF.changeQuant(Number(e.target.value), index)}
+                            className={styles.cartDivInp}
+                        />
+
+                        <img 
+                            src={add}
+                            onClick={() => cartF.incItem(item, index)} 
+                            className={styles.cartDivBut}
+                        />
+                    </div>
+
+                    <button 
+                        className={styles.cartButton}
+                        onClick={() => cartF.removeFromCart(index)}
+                        >
+                        Remove
+                    </button>
+
+                </div>
+
             </div>
     )
 }
