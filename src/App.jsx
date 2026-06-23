@@ -2,12 +2,13 @@
 import './App.css'
 import { RouterProvider } from 'react-router'
 import { ProductList } from './components/product-list'
+import { CartList } from './components/cart-list'
 
 import { router } from './routes'
 
 function App() {
   return (
-    <ProductList> <RouterProvider router={router} /> </ProductList>
+    <ProductList> <CartList> <RouterProvider router={router} /> </CartList> </ProductList>
   )
 }
 

@@ -1,6 +1,7 @@
 /* navbar.module.css */
 
 .navbar {
+    z-index: 10;
     position: sticky;
     top: 0;
     display: flex;
@@ -9,6 +10,8 @@
     background-color: #002349;
     color: #957C3D;
     background-image: url("./../../assets/navbar-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .title {
@@ -47,4 +50,18 @@ nav {
     color:#957C3D;
     font-weight: 900;
     border-bottom: 3px solid #957C3D;
+}
+
+.cartWrap {
+    position: relative;
+}
+.cartWrapBadge {
+    font-size: 17px;
+    font-weight: 900;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

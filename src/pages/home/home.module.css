@@ -3,7 +3,7 @@
 .home {
     margin-top: 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     min-width: 800px;
     min-height: 100%;
     padding: 50px;
@@ -11,11 +11,23 @@
     gap: 20px;
 }
 
+.heroWrap {
+    display: flex;
+    flex-direction: row;
+}
+
 .hero {
     display: flex;
     flex-direction: column;
+    align-self: center;
     width: 40%;
     min-height: 100%;
+}
+.hero > h1 {
+    font-size: 40px;
+}
+.hero > p {
+    font-size: 25px;
 }
 
 .slides {
@@ -24,8 +36,12 @@
     justify-content: center;
     padding: 30px;
     background-image: url("./../../assets/slide-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 50%;
     min-height: 100%;
+
+    overflow: hidden;
 }
 
 
@@ -33,6 +49,8 @@
     position: absolute;
     content: "";
     background-image: url("./../../assets/navbar-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     opacity: 0;
     top: 0;
     left: 0;
@@ -65,4 +83,19 @@
 .productImg {
     width: 200px;
     height: 200px;
+}
+
+.aaahh {
+    position: relative;
+    width: 100%;
+}
+
+.homeContent {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.clothing > p {
+    font-size: 20px;
 }

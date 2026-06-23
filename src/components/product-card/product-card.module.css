@@ -26,6 +26,66 @@
     font-size: 20px;
     font-weight: 900;
     color: #957C3D;
+    margin-bottom: 20px;
+}
+
+
+.cartButton::before {
+    position: absolute;
+    content: "";
+    background-image: url("./../../assets/navbar-bg.png");
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.cartButton {
+    position: relative;
+    color: #957C3D;
+    font-size: 18px;
+    padding: 10px 50px 10px 50px;
+    outline: none;
+    z-index: 1;
+    border: 2px solid #957C3D;
+    margin-top: auto;
+}
+
+
+.cartButton:hover::before {
+    opacity: 1;
+    background-color: transparent;
+}
+
+.cartDiv {
+    margin-top: auto;
+    margin-bottom: 15px;
+    display: flex;
+    border-radius: 9px;
+    border: 2px solid #957C3D;
+    box-sizing: border-box;
+}
+.cartDivInp {
+    border: none;
+    background: none;
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    width: 40px;
+    height: 100%;
+    border-left: 2px solid #957C3D;
+    border-right: 2px solid #957C3D;
+}
+.cartDivInp::-webkit-inner-spin-button,
+.cartDivInp::-webkit-outer-spin-button {
+    appearance: none;
+}
+.cartDivBut {
+    width: 40px;
+    height: 40px;
 }
 
 /* Vertical */
