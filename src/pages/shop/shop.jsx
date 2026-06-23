@@ -9,6 +9,11 @@ export function Shop () {
     const data = useContext(Products)
     const cart = useContext(CartItems)
 
+    if (!data) {
+        return (
+            <h1 className={styles.first}>The shop is empty</h1>
+        )
+    }
 
     return (
         <div className={styles.shopWrapper}>

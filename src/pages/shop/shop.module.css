@@ -8,6 +8,12 @@
     padding: 0px 30px 30px 40px;
 }
 
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .head {
     border-bottom: 3px solid #957C3D;
 }
