@@ -29,6 +29,7 @@ export function Home () {
                 <div className={styles.clothing}>
                     <p>Honestly i thought this would be done in a day or two but it just kept going. I had to google a lot of stuff the slide thing was annoying to do. The routing thing tooks some time.</p>
                     <p>I still haven't done the cart section, and right now i don't care if it looks good or not, i just want to get this done. I'll update this along</p>
+                    <p>Update: finished cart. i'll do the testing later</p>
                 </div>
             </div>
         </div>

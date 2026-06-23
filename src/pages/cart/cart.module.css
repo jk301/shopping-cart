@@ -71,17 +71,107 @@
     text-align: center;
     margin: 0;
     background-color: white;
+    padding: 20px;
 }
 
 .sumDetail {
+    width: 100%;
     display: flex;
     align-items: center;
 }
 .sumDetail > h3 {
-    font-size: 15px;
+    font-size: 20px;
+    margin-right: auto;
 }
 .sumDetail > p {
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 17px;
+    color: rgb(80, 80, 80);
+    font-weight: 900;
     margin-left: auto;
+}
+
+.sumDetail > input {
+    font-family: inherit;
+    font-size: 13px;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+}
+.sumDetail > button {
+    padding: 10px 20px 10px 20px;
+    margin-left: 10px;
+    font-size: 14px;
+    border: 2px solid #957C3D;
+}
+.sumTotal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.cartButton::before {
+    position: absolute;
+    content: "";
+    background-image: url("./../../assets/navbar-bg.png");
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.cartButton {
+    position: relative;
+    color: #957C3D;
+    font-size: 18px;
+    padding: 10px 50px 10px 50px;
+    outline: none;
+    z-index: 1;
+    border: 2px solid #957C3D;
+}
+
+
+.cartButton:hover::before {
+    opacity: 1;
+    background-color: transparent;
+}
+
+.summary > button {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+
+
+.paymentOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.paymentCont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+.paymentCard {
+    display: flex;
+    border: 2px solid #957C3D;
+    padding: 10px;
+    width: 93%;
+}
+.paymentCard > h3 {
+    margin: 0;
+    margin-right: auto;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
 }
