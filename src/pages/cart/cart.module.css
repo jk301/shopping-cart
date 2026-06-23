@@ -14,7 +14,7 @@
     display: flex;
     border: 2px solid #957C3D;
     width: 70%;
-    height: 100vh;
+    height: fit-content; 
     margin-bottom: 40px;
 }
 
@@ -24,7 +24,6 @@
     padding: 30px;
     padding-top: 0px;
     width: 60%;
-    height: 100%;
     box-sizing: border-box;
 }
 
@@ -33,16 +32,14 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    height: 100%;
-    padding-bottom: 30px;
+    max-height: 90vh;
     overflow-y: auto;
-    flex: 1;
-    min-height: 0;
+    padding-bottom: 30px;
+    width: 100%;
 }
 .cardtit {
     position: sticky;
     top: 0;
-
     font-size: 30px;
     font-weight: 900;
     text-align: center;
@@ -50,16 +47,17 @@
     background-color: white;
     padding: 20px;
     box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 
 .otherDetail {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: 40%;
     padding: 30px;
     padding-top: 0;
+    box-sizing: border-box;
 }
 
 .summary {
@@ -100,25 +98,40 @@
     font-family: inherit;
     font-size: 13px;
     padding: 10px 20px 10px 20px;
-    width: 100%;
+    flex: 1;
+    min-width: 0;
 }
 .sumDetail > button {
     padding: 10px 20px 10px 20px;
     margin-left: 10px;
     font-size: 14px;
     border: 2px solid #957C3D;
+    cursor: pointer;
 }
+
 .sumTotal {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
 }
-
+.sumTotal > h2 {
+    margin-right: auto;
+    margin: 10px;
+}
+.sumTotal > h3 {
+    margin-left: auto;
+    margin: 10px;
+}
 
 .cartButton::before {
     position: absolute;
     content: "";
     background-image: url("./../../assets/navbar-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     opacity: 0;
     top: 0;
     left: 0;
@@ -136,20 +149,20 @@
     outline: none;
     z-index: 1;
     border: 2px solid #957C3D;
+    cursor: pointer;
+    background: transparent;
 }
-
 
 .cartButton:hover::before {
     opacity: 1;
-    background-color: transparent;
 }
 
 .summary > button {
     font-weight: 900;
     font-size: 30px;
+    width: 100%;
+    margin-top: 15px;
 }
-
-
 
 .paymentOption {
     margin-top: 40px;
@@ -159,27 +172,39 @@
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    padding-bottom: 20px;
 }
 .paymentCont {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 10px;
-    overflow-y: auto;
     box-sizing: border-box;
-    min-height: 0;
-    flex: 1;
+    padding-top: 15px;
 }
+
 .paymentCard {
     display: flex;
+    align-items: center;
     border: 2px solid #957C3D;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
     box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 .paymentCard > h3 {
     margin: 0;
     margin-right: auto;
+}
+.paymentCard > input[type="radio"] {
+    cursor: pointer;
+    margin: 0;
+}
+
+.paymentCard:has(input[type="radio"]:checked) {
+    background-color: #fbf9f4; 
+    box-shadow: 0px 8px 6px -6px rgba(149, 124, 61, 0.3);
 }
 
 .first {
